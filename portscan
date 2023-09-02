@@ -1,17 +1,16 @@
 import socket
-host = '192.168.1.1'
+
+host = '10.1.1.1'
 port = 1
-target = open('openports.txt','a')
+
 while port < 65535:
     s = socket.socket()
     s.settimeout(1)
     try:
         s.connect((host, port))
-        target.write("" + str(port))
-        target.write("\n")
         s.close()
-        print "open on port " + str(port)
+        print('open on port {str(port)}')
     except:
-        print "closed on port " + str(port)
-    port = port + 1
-target.close()
+        print ('closed on port {str(port)}')
+    port += 1
+
