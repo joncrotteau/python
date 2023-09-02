@@ -11,6 +11,6 @@ while port < 65535:
         s.close()
         print('open on port {str(port)}')
     except:
-        print ('closed on port {str(port)}')
+        print('closed on port {str(port)}')
     port += 1
 
